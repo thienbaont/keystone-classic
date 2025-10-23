@@ -41,7 +41,7 @@ A simple Post model for a blog might look like this:
 **Post.js**
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Types = keystone.Field.Types;
 
 var Post = new keystone.List('Post', {
@@ -106,7 +106,7 @@ Parent lists may not themselves inherit from other lists.
 **Example: Inheriting List fields from other lists**
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 
 var BasePage = new keystone.List('BasePage', {
   map: { name: 'title' },
@@ -155,7 +155,7 @@ To query data, you can use any of the [mongoose query](http://mongoosejs.com/doc
 **Loading Posts**
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Post = keystone.list('Post');
 
 Post.model.find()
@@ -177,7 +177,7 @@ For example: load `100` posts, then do something asynchronous, then do something
 **Loading Posts, doing something asynchronous, doing something**
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Post = keystone.list('Post');
 
 Post.model.find()
@@ -206,7 +206,7 @@ To create new items, again use the [mongoose model](http://mongoosejs.com/docs/m
 **Creating Posts**
 
 ```javascript
-var keystone = require('keystone')
+var keystone = require('moorr-keystone')
 var Post = keystone.list('Post');
 
 var newPost = new Post.model({
@@ -233,7 +233,7 @@ To delete items, first load the data, then use the `remove` method:
 **Deleting a Post**
 
 ```javascript
-var keystone = require('keystone')
+var keystone = require('moorr-keystone')
 var Post = keystone.list('Post');
 
 Post.model.findById(postId)
@@ -303,7 +303,7 @@ Some field types include helpful **underscore methods**, which are available on 
 **For example**: use the `format` underscore method of the `createdAt` `DateTime` field of the Posts List (above) like this
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Post = keystone.list('Post');
 
 Post.model.findById(postId).exec(function(err, post) {

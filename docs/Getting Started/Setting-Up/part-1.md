@@ -37,7 +37,7 @@ Create a new file, `keystone.js`, and you'll be ready to start configuring Keyst
 The minimum file we need to start Keystone running is:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 
 keystone.init({
   'cookie secret': 'secure string goes here',

@@ -50,7 +50,7 @@ Valid options are:
 **Example using custom express-session store**
 
 ```javascript
-var keystone = require('keystone'),
+var keystone = require('moorr-keystone'),
     ConnectMemcached = require('connect-memcached')
 
 keystone.init({

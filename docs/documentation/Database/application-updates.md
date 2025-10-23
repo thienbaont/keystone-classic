@@ -20,7 +20,7 @@ Updates are only run once, and each completed update is logged in an `app_update
 Creates a new admin User
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var User = keystone.list('User');
 
 exports = module.exports = function(done) {
@@ -39,7 +39,7 @@ The application updates framework saves all of the items it receives before it c
 Please consider opting out of the `exports.create` mechanism to instead have more control of the direct operations that happen with Mongo, for example:
 
 ```
-const keystone = require('keystone');
+const keystone = require('moorr-keystone');
 const PostCategory = keystone.list('PostCategory');
 const Post = keystone.list('Post');
 

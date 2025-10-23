@@ -5,7 +5,7 @@ Once you retrieve a list from Keystone, the [mongoose](http://mongoosejs.com/) m
 Example:
 
 ```javascript
-var User = require('keystone').list('User');
+var User = require('moorr-keystone').list('User');
 
 User.model.find({});
 ```

@@ -16,7 +16,7 @@ From [Part 1: Initial Setup](/getting-started/setting-up/part-1), you should hav
 You should have installed Keystone with at least the following in your `keystone.js` file:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 
 keystone.init({
   'cookie secret': 'secure string goes here',
@@ -83,7 +83,7 @@ Your project folder should now look like:
 In `User.js` you are going to start by creating a new list. You'll need the following code:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 
 var User = new keystone.List('User');
 ```
@@ -161,7 +161,7 @@ Alright, that's your User model complete!
 You should now have a file that looks like this:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 
 var User = new keystone.List('User');
 
@@ -217,7 +217,7 @@ Below is a more interesting model to play with. Add this in and then restart you
 `models/Event.js`
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Types = keystone.Field.Types;
 
 var Event = new keystone.List('Event');

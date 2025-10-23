@@ -27,7 +27,7 @@ introduced in KeystoneJS v4.0 Beta. This code should be copied into the
 file `models/FileUpload.js`.
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Types = keystone.Field.Types;
 
 /**
@@ -81,7 +81,7 @@ download files to KeystoneJS. This is a two step process. The first step
 is add a few lines of code to the `routes/index.js` file:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 
@@ -127,7 +127,7 @@ the code below into `routes/api/fileupload.js`.
 
 ```javascript
 var async = require('async'),
-keystone = require('keystone');
+keystone = require('moorr-keystone');
 var exec = require('child_process').exec;
 
 var FileData = keystone.list('FileUpload');

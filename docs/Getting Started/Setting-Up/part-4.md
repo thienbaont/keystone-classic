@@ -7,7 +7,7 @@ For the final part of this Setting Up guide, we're going to set up an API endpoi
 We are going to use a second model, the Event model that was looked at briefly in [Part 2: Data Model Setup](/getting-started/setting-up/part-2):
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Types = keystone.Field.Types;
 
 var Event = new keystone.List('Event');
@@ -175,7 +175,7 @@ Once the form data has been validated, we can move to looking at how data is sav
 We will require a few packages before we come back to our route function:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Event = keystone.list('Event');
 ```
 
@@ -200,7 +200,7 @@ Event.updateItem(newEvent)
 This leaves us with a file looking like:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Event = keystone.list('Event');
 
 module.exports = function (req, res) {

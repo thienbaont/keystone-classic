@@ -15,7 +15,7 @@ to load the `posts` with the `maxPages` 10 and `perPage` 10, with state is `publ
 **Loading Posts with paginate**
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Post = keystone.list('Post');
 
 Post.paginate({

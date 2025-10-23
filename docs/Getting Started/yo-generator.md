@@ -33,7 +33,7 @@ In the guide we'll be using the default options of [Pug](https://pugjs.org) for 
 The first place to look is the `keystone.js` file. This is the script that will run your Keystone website, and is the file used to set most of the Keystone configuration options.
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 keystone.init({
 
   'name': 'My Project',
@@ -117,7 +117,7 @@ We're going to start with the `User` model, which is special -- this is required
 This script initialises the `User` model. It doesn't need to export anything, but the model *must* be registered with Keystone.
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var Types = keystone.Field.Types;
 
 var User = new keystone.List('User');
@@ -161,7 +161,7 @@ Keystone's [importer](/api/methods/importer) and Express's middleware support ma
 This script imports your route controllers and binds them to URLs:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
 
@@ -395,7 +395,7 @@ If you want to use a custom template engine, set the `custom engine` option as w
 
 ```javascript
 // Modified web.js to use the ejs-locals custom template engine.
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var engine   = require('ejs-locals');
 keystone.init({
   ...
@@ -433,7 +433,7 @@ To automatically add a new Admin User when your app first launches, create an `u
 Update script to add the first admin (change to your own name, email and password)
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var User = keystone.list('User');
 
 exports = module.exports = function(done) {

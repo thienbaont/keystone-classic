@@ -20,7 +20,7 @@ From [Part 1: Initial Setup](/getting-started/setting-up/part-1) you should have
 Keystone should already be installed and at a minimum your `keystone.js` file should include the following:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 
 keystone.init({
   'cookie secret': 'secure string goes here',
@@ -106,7 +106,7 @@ For each route we want, we add a new path and route function. In the example abo
 What we are going to add will be slightly more complicated:
 
 ```javascript
-var keystone = require('keystone');
+var keystone = require('moorr-keystone');
 var importRoutes = keystone.importer(__dirname);
 
 var routes = {

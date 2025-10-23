@@ -1,6 +1,6 @@
 {
-  "name": "keystone",
-  "version": "4.2.1",
+  "name": "moorr-keystone",
+  "version": "4.2.3",
   "description": "Web Application Framework and Admin GUI / Content Management System built on Express.js and Mongoose",
   "main": "index.js",
   "repository": {
@@ -69,6 +69,7 @@
     "mime-types": "^2.1.24",
     "moment": "^2.24.0",
     "mongoose": "^5.13.20",
+    "mongoose-legacy-pluralize": "2.0.0",
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
     "numeral": "^2.0.6",
@@ -118,7 +119,6 @@
     "eslint-plugin-react": "^7.13.0",
     "istanbul": "^0.4.5",
     "keystone-email": "^1.1.0",
-    "keystone-nightwatch-e2e": "^0.2.14",
     "mocha": "^3.5.3",
     "must": "^0.13.4",
     "proxyquire": "^2.1.0",
@@ -185,6 +185,7 @@
     "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha",
     "posttest-cov": "if [ -n \"$CODECLIMATE_REPO_TOKEN\" ]; then codeclimate-test-reporter < coverage/lcov.info; fi",
     "clean": "rimraf ./coverage",
-    "fields-explorer": "node ./fields/explorer/server.js"
+    "fields-explorer": "node ./fields/explorer/server.js",
+    "publish:public": "npm run build && npm publish --access public"
   }
 }
